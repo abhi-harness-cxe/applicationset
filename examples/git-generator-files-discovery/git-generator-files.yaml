@@ -1,24 +1,24 @@
-apiVersion: argoproj.io/v1alpha1
-kind: ApplicationSet
 metadata:
-  name: guestbook
+  name: "guestbook"
+apiVersion: "argoproj.io/v1alpha1"
+kind: "ApplicationSet"
+asset_id: "667586565356"
 spec:
-  generators:
-    - git:
-        repoURL: https://github.com/abhi-harness-cxe/applicationset.git
-        revision: HEAD
-        files:
-        - path: "examples/git-generator-files-discovery/cluster-config/**/config.json"
   template:
     metadata:
-      name: '{{cluster.name}}-guestbook'
+      name: "{{cluster.name}}-guestbook"
     spec:
-      project: default
-      source:
-        repoURL: https://github.com/abhi-harness-cxe/applicationset.git
-        targetRevision: HEAD
-        path: "examples/git-generator-files-discovery/apps/guestbook"
       destination:
-        server: https://kubernetes.default.svc
-        #server: '{{cluster.address}}'
-        namespace: guestbook
+        server: "https://kubernetes.default.svc"
+        namespace: "guestbook"
+      project: "default"
+      source:
+        repoURL: "https://github.com/abhi-harness-cxe/applicationset.git"
+        path: "examples/git-generator-files-discovery/apps/guestbook"
+        targetRevision: "HEAD"
+  generators:
+  - git:
+      repoURL: "https://github.com/abhi-harness-cxe/applicationset.git"
+      files:
+      - path: "examples/git-generator-files-discovery/cluster-config/**/config.json"
+      revision: "HEAD"

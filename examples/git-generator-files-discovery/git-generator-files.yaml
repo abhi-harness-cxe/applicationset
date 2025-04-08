@@ -1,7 +1,7 @@
 metadata:
   name: "guestbook"
 apiVersion: "argoproj.io/v1alpha1"
-asset_id: "1234556"
+asset_id: "abhi12334"
 kind: "ApplicationSet"
 spec:
   template:

@@ -4,6 +4,7 @@
     "address" : "https://kuberentes.default.svc",
     "name" : "engineering-dev"
   },
-  "aws_account" : "123456",
-  "asset_id" : "11223344"
+  "asset_id" : "11223344",
+  "test" : "abhi",
+  "aws_account" : "123456"
 }

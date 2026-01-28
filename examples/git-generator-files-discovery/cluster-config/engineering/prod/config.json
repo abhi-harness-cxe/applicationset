@@ -1,9 +1,10 @@
 {
-  "aws_account": "123456",
-  "asset_id": "11223344",
-  "cluster": {
-    "owner": "cluster-admin@company.com",
-    "name": "engineering-prod",
-    "address": "https://kubernetes.default.svc"
-  }
+  "cluster" : {
+    "owner" : "cluster-admin@company.com",
+    "address" : "https://kubernetes.default.svc",
+    "name" : "engineering-prod"
+  },
+  "asset_id" : "11223344",
+  "test" : "abhi",
+  "aws_account" : "123456"
 }
